@@ -8,7 +8,7 @@ class App extends React.Component {
     const props = this.props;
     return (
       <React.Fragment>
-        <div>count： { props.value }</div>
+        <div>value: { props.value }</div>
         <button onClick={ props.increment}>+1</button>
         <button onClick={ props.decrement }>-1</button>
       </React.Fragment>
@@ -20,6 +20,7 @@ const mapStateToProps = state => ({ value: state.count.value });
 //   increment: () => dispatch(increment()),
 //   decrement: () => dispatch(decrement())
 // });
+// 上記は以下の用にショートハンドでも可
 
 const mapDispatchToProps = ({ increment, decrement });
 
